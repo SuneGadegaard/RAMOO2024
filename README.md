@@ -41,10 +41,10 @@ First create a new Python project. Next, place the three modules `BiObjectiveBnB
 The following code solves a Bi objective linear 0-1 program with 10 variables and 3 constraints:
 
 ```
-import BiObjectiveBnB as BIMOCO
+import BiObjectiveBnB as BICO_bnb
 
 if '__main__' == __name__:
-    bnb = BIMOCO.BranchAndBound()
+    bnb = BICO_bnb.BranchAndBound()
     bnb.readData('instance_10_3.json')
     bnb.setNodeSelectionStrategy('bestBound')
     bnb.setBranchingStrategy('mostOftenFractional')
