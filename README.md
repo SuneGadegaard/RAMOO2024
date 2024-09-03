@@ -25,7 +25,7 @@ The code makes use of the following libraries
 6. [queue](https://docs.python.org/3/library/queue.html) - used for implementing the branchign tree
 7. [PuLP](https://pypi.org/project/PuLP/) - used as AML for building the optimisation problem
 
-In addition to the above packages (that can all be installed using `pip`/`pip3`), the code makes use of the CBC solver. On Mac and linux installing CBC is fairly easy using e.g. `$ sudo apt-get install  coinor-cbc coinor-libcbc-dev` on Linux Ubuntu and 
+In addition to the above packages (that are all part of a standard installation of Python or can be installed using `pip`/`pip3`), the code makes use of the CBC solver. On Mac and linux installing CBC is fairly easy using e.g. `$ sudo apt-get install  coinor-cbc coinor-libcbc-dev` on Linux Ubuntu and 
 
 ```
 $ brew tap coin-or-tools/coinor
