@@ -32,7 +32,7 @@ $ brew tap coin-or-tools/coinor
 $ brew install coin-or-tools/coinor/cbc
 ```
 
-on a Mac using `homebrew` as package manager. For installing CBC on a Windows maching, please consult the official [COIN-OR github page](https://github.com/coin-or/Cbc).
+on a Mac using `homebrew` as package manager. For installing CBC on a Windows machine, please consult the official [COIN-OR github page](https://github.com/coin-or/Cbc).
 
 In case another solver supported by the PuLP modelling framworkis installed on the system, you can alter the code by replacing the lines `self.model.solve(plp.PULP_CBC_CMD(msg=0))` with e.g. `self.model.solve(plp.CPLEX_CMD(msg=0))` if CPLEX should be used or `self.model.solve(plp.GUROBI_CMD(msg=0))` if Gurobi should be used.
 
