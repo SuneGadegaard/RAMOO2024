@@ -3,6 +3,7 @@ Bi-objective branch and bound algorithm for 0-1 integer linear programming probl
 
 # The problems tackled
 The code solves bi-objective linear 0-1 problems of the form
+
 $$
 \begin{align}
 \min\ & Cx\\
