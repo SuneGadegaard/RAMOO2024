@@ -1,6 +1,18 @@
 # RAMOO2024
 Bi-objective branch and bound algorithm for 0-1 integer linear programming problems. Developed as a "toy" for the RAMOO workshop 2024 in Wuppertal.
 
+In case you find the code useful and use it in an academic context, please include the following reference:
+
+```
+@unpublished{GadegaardWuppertal2024,
+  author    = {Sune Lauth Gadegaard},
+  title     = {Branch and bound for multi-objective optimization: overview and future challenges},
+  note      = {Talk presented at the 11th Workshop on Recent Advances in Multi-Objective Optimization (RAMOO 2024) in Wuppertal, Germany},
+  year      = {2024},
+  month     = {September},
+}
+```
+
 # The problems tackled
 The code solves bi-objective linear 0-1 problems of the form
 
