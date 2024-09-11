@@ -34,7 +34,7 @@ $ brew install coin-or-tools/coinor/cbc
 
 on a Mac using `homebrew` as package manager. For installing CBC on a Windows machine, please consult the official [COIN-OR github page](https://github.com/coin-or/Cbc).
 
-In case another solver supported by the PuLP modelling framwork is installed on the system, you can alter the code by replacing the lines `self.model.solve(plp.PULP_CBC_CMD(msg=0))` with e.g. `self.model.solve(plp.CPLEX_CMD(msg=0))` if CPLEX should be used or `self.model.solve(plp.GUROBI_CMD(msg=0))` if Gurobi should be used. This should be done in the `LowerBoundSets.py` file.
+**In case another solver** (supported by the PuLP modelling framwork) **is installed on the system**, you can alter the code by replacing the lines `self.model.solve(plp.PULP_CBC_CMD(msg=0))` with e.g. `self.model.solve(plp.CPLEX_CMD(msg=0))` if CPLEX should be used or `self.model.solve(plp.GUROBI_CMD(msg=0))` if Gurobi should be used. This should be done in the `LowerBoundSets.py` file. Simply search for the lines to replace.
 
 # Example
 First create a new Python project. Next, place the three modules `BiObjectiveBnB.py`, `helperStructures.py`, and `LowerBoundSets.py` in the same folder as your python project. 
