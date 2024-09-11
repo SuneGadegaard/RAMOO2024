@@ -71,3 +71,4 @@ The instance is specified in a `.json` file having the format:
         [24,	22,	13,	16,	15,	19,	3,	12,	10,	11]]
 }
 ```
+placed in the same folder as the python script above.
