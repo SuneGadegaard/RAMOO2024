@@ -84,7 +84,7 @@ class LowerBoundSolver:
         self.model.objective[self.obj_1] = 1.0
         self.model.objective[self.obj_2] = 0.0
         self.model.solve(plp.PULP_CBC_CMD(msg=0))
-        if self.model.status == plp.LpStatusInfeasible:
+        if self.model.status != plp.LpStatusOptimal:
             #  If the model is infeasible, then stop, as no
             self.isInfeasible = True
             return
@@ -123,7 +123,7 @@ class LowerBoundSolver:
         self.model.objective[self.obj_2] = 0.0
         self.model.solve(plp.PULP_CBC_CMD(msg=0))
         objValues.append(self.model.objective.value())
-        if self.model.status == plp.LpStatusInfeasible:
+        if self.model.status != plp.LpStatusOptimal:
             #  If the model is infeasible, then stop, as no
             self.isInfeasible = True
             return
