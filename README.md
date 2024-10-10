@@ -26,6 +26,14 @@ $$
 
 where $C$ is $2\times n$ matrix, $A$ is an $m\times n$ matrix, $b$ is an $m$-vector, and $x$ is an $n$-vector. The algorithms uses a branch-and-bound approach to compute the set of non-dominated outcome vectors along with one feasible pre-image for each non-dominated vector. A (small) number of settings can be tweaked in order to change the behaviour of the algorithm.
 
+# The two versions of the code
+The algorithm is implemented in two versions - one that uses the `PuLP` modelling framework and any supported solver as engine, and then one version (which can be found in the "Gurobi_version" folder) that utilises the `gurobipy` modelling framework as well as the Gurobi solver. 
+The latter (the Gurobi version) is orders of magnitude faster than the PuLP + a solver version. This basically boils down to the fact that the PuLP modelling framework writes a `.lp` file which is then solved by the specified solver through terminal commands, whereas the Gurobi version makes use of the Gurobi Python API available through the `gurobipy` package. In addition to this, the Gurobi version also implements a simple primal heuristic, which is run at every node of the branch and bound tree until a specified depth. This also adds to the speed-up of the implementation.
+
+Hence if one has access to the Gurobi solver, it is recommended to use the Gurobi version of the implementation.
+
+In case one wish to use the CPLEX solver, this can be done by altering the `GRBLowerBoundSet.py` and the `RENS.py` files to use the [DOcplex](https://pypi.org/project/docplex/) API to CPLEX. This has not been tested, but it should be relatively easy to transfer from the `gurobipy`syntax to the `DOcplex`syntax.
+
 # Dependencies 
 The code makes use of the following libraries
 
@@ -36,6 +44,7 @@ The code makes use of the following libraries
 5. [random](https://docs.python.org/3/library/random.html) - used for random number generation
 6. [queue](https://docs.python.org/3/library/queue.html) - used for implementing the branchign tree
 7. [PuLP](https://pypi.org/project/PuLP/) - used as AML for building the optimisation problem
+8. [gurobipy]([https://pypi.org/project/PuLP/](https://pypi.org/project/gurobipy/)) - used for the "Gurobi_version" implementation which also uses the Gurobi solver as solver engine
 
 In addition to the above packages (that are all part of a standard installation of Python or can be installed using `pip`/`pip3`), <font color="red">**the code makes use of the CBC solver**</font>. On Mac and linux installing CBC is fairly easy using e.g. `$ sudo apt-get install  coinor-cbc coinor-libcbc-dev` on Linux Ubuntu and 
 
