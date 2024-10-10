@@ -44,7 +44,7 @@ The code makes use of the following libraries
 5. [random](https://docs.python.org/3/library/random.html) - used for random number generation
 6. [queue](https://docs.python.org/3/library/queue.html) - used for implementing the branchign tree
 7. [PuLP](https://pypi.org/project/PuLP/) - used as AML for building the optimisation problem
-8. [gurobipy]([https://pypi.org/project/PuLP/](https://pypi.org/project/gurobipy/)) - used for the "Gurobi_version" implementation which also uses the Gurobi solver as solver engine
+8. [gurobipy](https://pypi.org/project/gurobipy/) - used for the "Gurobi_version" implementation which also uses the Gurobi solver as solver engine
 
 In addition to the above packages (that are all part of a standard installation of Python or can be installed using `pip`/`pip3`), <font color="red">**the code makes use of the CBC solver**</font>. On Mac and linux installing CBC is fairly easy using e.g. `$ sudo apt-get install  coinor-cbc coinor-libcbc-dev` on Linux Ubuntu and 
 
