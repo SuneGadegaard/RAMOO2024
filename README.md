@@ -32,7 +32,7 @@ The latter (the Gurobi version) is orders of magnitude faster than the PuLP + a 
 
 Hence if one has access to the Gurobi solver, it is recommended to use the Gurobi version of the implementation.
 
-In case one wish to use the CPLEX solver, this can be done by altering the `GRBLowerBoundSet.py` and the `RENS.py` files to use the [DOcplex](https://pypi.org/project/docplex/) API to CPLEX. This has not been tested, but it should be relatively easy to transfer from the `gurobipy`syntax to the `DOcplex`syntax.
+In case one wishes to use the CPLEX solver, this can be done by altering the `GRBLowerBoundSet.py` and the `RENS.py` files to use the [DOcplex](https://pypi.org/project/docplex/) API to CPLEX. This has not been tested!, but it should be relatively easy to transfer from the `gurobipy`syntax to the `DOcplex`syntax.
 
 # Dependencies 
 The code makes use of the following libraries
